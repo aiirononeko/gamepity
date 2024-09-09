@@ -7,7 +7,7 @@
     "build": "remix vite:build",
     "deploy": "pnpm run build && wrangler pages deploy",
     "dev": "remix vite:dev",
-    "lint": "eslint --ignore-path .gitignore --cache --cache-location ./node_modules/.cache/eslint .",
+    "lint": "npx @biomejs/biome check --write app server functions",
     "start": "wrangler pages dev ./build/client",
     "typecheck": "tsc",
     "typegen": "wrangler types",
@@ -15,14 +15,18 @@
     "cf-typegen": "wrangler types"
   },
   "dependencies": {
+    "@hono/vite-dev-server": "^0.16.0",
     "@remix-run/cloudflare": "^2.11.1",
     "@remix-run/cloudflare-pages": "^2.11.1",
     "@remix-run/react": "^2.11.1",
+    "hono": "^4.5.11",
+    "hono-remix-adapter": "^0.1.2",
     "isbot": "^4.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@biomejs/biome": "1.8.3",
     "@cloudflare/workers-types": "^4.20240903.0",
     "@remix-run/dev": "^2.11.1",
     "@types/react": "^18.2.20",

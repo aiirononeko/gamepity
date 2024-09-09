@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@hono/vite-dev-server':
+        specifier: ^0.16.0
+        version: 0.16.0(hono@4.5.11)(miniflare@3.20240512.0)(wrangler@3.57.1(@cloudflare/workers-types@4.20240903.0))
       '@remix-run/cloudflare':
         specifier: ^2.11.1
         version: 2.11.2(@cloudflare/workers-types@4.20240903.0)(typescript@5.5.4)
@@ -17,6 +20,12 @@ importers:
       '@remix-run/react':
         specifier: ^2.11.1
         version: 2.11.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.5.4)
+      hono:
+        specifier: ^4.5.11
+        version: 4.5.11
+      hono-remix-adapter:
+        specifier: ^0.1.2
+        version: 0.1.2(@cloudflare/workers-types@4.20240903.0)(hono@4.5.11)(miniflare@3.20240512.0)(typescript@5.5.4)(wrangler@3.57.1(@cloudflare/workers-types@4.20240903.0))(zod@3.23.8)
       isbot:
         specifier: ^4.1.0
         version: 4.4.0
@@ -27,6 +36,9 @@ importers:
         specifier: ^18.2.0
         version: 18.3.1(react@18.3.1)
     devDependencies:
+      '@biomejs/biome':
+        specifier: 1.8.3
+        version: 1.8.3
       '@cloudflare/workers-types':
         specifier: ^4.20240903.0
         version: 4.20240903.0
@@ -237,6 +249,59 @@ packages:
   '@babel/types@7.25.6':
     resolution: {integrity: sha512-/l42B1qxpG6RdfYf343Uw1vmDjeNhneUXtzhojE7pDgfpEypmRhI6j1kr17XCVv4Cgl9HdAiQY2x0GwKm7rWCw==}
     engines: {node: '>=6.9.0'}
+
+  '@biomejs/biome@1.8.3':
+    resolution: {integrity: sha512-/uUV3MV+vyAczO+vKrPdOW0Iaet7UnJMU4bNMinggGJTAnBPjCoLEYcyYtYHNnUNYlv4xZMH6hVIQCAozq8d5w==}
+    engines: {node: '>=14.21.3'}
+    hasBin: true
+
+  '@biomejs/cli-darwin-arm64@1.8.3':
+    resolution: {integrity: sha512-9DYOjclFpKrH/m1Oz75SSExR8VKvNSSsLnVIqdnKexj6NwmiMlKk94Wa1kZEdv6MCOHGHgyyoV57Cw8WzL5n3A==}
+    engines: {node: '>=14.21.3'}
+    cpu: [arm64]
+    os: [darwin]
+
+  '@biomejs/cli-darwin-x64@1.8.3':
+    resolution: {integrity: sha512-UeW44L/AtbmOF7KXLCoM+9PSgPo0IDcyEUfIoOXYeANaNXXf9mLUwV1GeF2OWjyic5zj6CnAJ9uzk2LT3v/wAw==}
+    engines: {node: '>=14.21.3'}
+    cpu: [x64]
+    os: [darwin]
+
+  '@biomejs/cli-linux-arm64-musl@1.8.3':
+    resolution: {integrity: sha512-9yjUfOFN7wrYsXt/T/gEWfvVxKlnh3yBpnScw98IF+oOeCYb5/b/+K7YNqKROV2i1DlMjg9g/EcN9wvj+NkMuQ==}
+    engines: {node: '>=14.21.3'}
+    cpu: [arm64]
+    os: [linux]
+
+  '@biomejs/cli-linux-arm64@1.8.3':
+    resolution: {integrity: sha512-fed2ji8s+I/m8upWpTJGanqiJ0rnlHOK3DdxsyVLZQ8ClY6qLuPc9uehCREBifRJLl/iJyQpHIRufLDeotsPtw==}
+    engines: {node: '>=14.21.3'}
+    cpu: [arm64]
+    os: [linux]
+
+  '@biomejs/cli-linux-x64-musl@1.8.3':
+    resolution: {integrity: sha512-UHrGJX7PrKMKzPGoEsooKC9jXJMa28TUSMjcIlbDnIO4EAavCoVmNQaIuUSH0Ls2mpGMwUIf+aZJv657zfWWjA==}
+    engines: {node: '>=14.21.3'}
+    cpu: [x64]
+    os: [linux]
+
+  '@biomejs/cli-linux-x64@1.8.3':
+    resolution: {integrity: sha512-I8G2QmuE1teISyT8ie1HXsjFRz9L1m5n83U1O6m30Kw+kPMPSKjag6QGUn+sXT8V+XWIZxFFBoTDEDZW2KPDDw==}
+    engines: {node: '>=14.21.3'}
+    cpu: [x64]
+    os: [linux]
+
+  '@biomejs/cli-win32-arm64@1.8.3':
+    resolution: {integrity: sha512-J+Hu9WvrBevfy06eU1Na0lpc7uR9tibm9maHynLIoAjLZpQU3IW+OKHUtyL8p6/3pT2Ju5t5emReeIS2SAxhkQ==}
+    engines: {node: '>=14.21.3'}
+    cpu: [arm64]
+    os: [win32]
+
+  '@biomejs/cli-win32-x64@1.8.3':
+    resolution: {integrity: sha512-/PJ59vA1pnQeKahemaQf4Nyj7IKUvGQSc3Ze1uIGi+Wvr1xF7rGobSrAAG01T/gUDG21vkDsZYM03NAmPiVkqg==}
+    engines: {node: '>=14.21.3'}
+    cpu: [x64]
+    os: [win32]
 
   '@cloudflare/kv-asset-handler@0.1.3':
     resolution: {integrity: sha512-FNcunDuTmEfQTLRLtA6zz+buIXUHj1soPvSWzzQFBC+n2lsy+CGf/NIrR3SEPCmsVNQj70/Jx2lViCpq+09YpQ==}
@@ -718,6 +783,25 @@ packages:
   '@fastify/busboy@2.1.1':
     resolution: {integrity: sha512-vBZP4NlzfOlerQTnba4aqZoMhE/a9HY7HRqoOPaETQcSQuWEIyZMHGfVu6w9wGtGK5fED5qRs2DteVCjOH60sA==}
     engines: {node: '>=14'}
+
+  '@hono/node-server@1.12.2':
+    resolution: {integrity: sha512-xjzhqhSWUE/OhN0g3KCNVzNsQMlFUAL+/8GgPUr3TKcU7cvgZVBGswFofJ8WwGEHTqobzze1lDpGJl9ZNckDhA==}
+    engines: {node: '>=18.14.1'}
+    peerDependencies:
+      hono: ^4
+
+  '@hono/vite-dev-server@0.16.0':
+    resolution: {integrity: sha512-zGPaYY7DyDr33id677fUuaPiV2qQJoPrxv+nrcLc7g8M9PkcvlV8kO2XRkrwZT64rUSBxyWOuGN3vEIFiH9l0w==}
+    engines: {node: '>=18.14.1'}
+    peerDependencies:
+      hono: '*'
+      miniflare: '*'
+      wrangler: '*'
+    peerDependenciesMeta:
+      miniflare:
+        optional: true
+      wrangler:
+        optional: true
 
   '@humanwhocodes/config-array@0.11.14':
     resolution: {integrity: sha512-3T8LkOmg45BV5FICb15QQMsyUSWrQ8AygVfC7ZG32zOalnqrilm018ZVCw0eapXux8FtA33q8PSRSstjee3jSg==}
@@ -2027,6 +2111,16 @@ packages:
   hast-util-whitespace@2.0.1:
     resolution: {integrity: sha512-nAxA0v8+vXSBDt3AnRUNjyRIQ0rD+ntpbAp4LnPkumc5M9yUbSMa4XDU9Q6etY4f1Wp4bNgvc1yjiZtsTTrSng==}
 
+  hono-remix-adapter@0.1.2:
+    resolution: {integrity: sha512-II24qGG+TdXbfXc04208WnUiGJ8XuAu2I7j2ABiIpRYcOra3phaCU4eANyVYUlq3S9aeBPc+L5hXZUVpShcnwg==}
+    engines: {node: '>=18.0.0'}
+    peerDependencies:
+      hono: '*'
+
+  hono@4.5.11:
+    resolution: {integrity: sha512-62FcjLPtjAFwISVBUshryl+vbHOjg8rE4uIK/dxyR8GpLztunZpwFmfEvmJCUI7xoGh/Sr3CGCDPCmYxVw7wUQ==}
+    engines: {node: '>=16.0.0'}
+
   hosted-git-info@6.1.1:
     resolution: {integrity: sha512-r0EI+HBMcXadMrugk0GCQ+6BQV39PiWAZVfq7oIckeGiN7sjRGyQxPdft3nQekFTCQbYxLBH+/axZMeH8UX6+w==}
     engines: {node: ^14.17.0 || ^16.13.0 || >=18.0.0}
@@ -2951,6 +3045,10 @@ packages:
     engines: {node: '>=10.13.0'}
     hasBin: true
 
+  pretty-cache-header@1.0.0:
+    resolution: {integrity: sha512-xtXazslu25CdnGnUkByU1RoOjK55TqwatJkjjJLg5ZAdz2Lngko/mmaUgeET36P2GMlNwh3fdM7FWBO717pNcw==}
+    engines: {node: '>=12.13'}
+
   pretty-ms@7.0.1:
     resolution: {integrity: sha512-973driJZvxiGOQ5ONsFhOF/DtzPMOMtgC11kCpUrPGMTgqp2q/1gwzCquocrN33is0VZ5GFHXZYMM9l6h67v2Q==}
     engines: {node: '>=10'}
@@ -3084,6 +3182,23 @@ packages:
 
   remark-rehype@10.1.0:
     resolution: {integrity: sha512-EFmR5zppdBp0WQeDVZ/b66CWJipB2q2VLNFMabzDSGR66Z2fQii83G5gTBbgGEnEEA0QRussvrFHxk1HWGJskw==}
+
+  remix-hono@0.0.16:
+    resolution: {integrity: sha512-IPooI2E0eSFRV9wAgTzpsklSoOyij6Nsk6ANIugGhD9vYlovbYb2BT+siz++sLzWseZSPEtIzx/LBel203jBfQ==}
+    peerDependencies:
+      '@remix-run/cloudflare': ^2.0.0
+      i18next: ^23.0.0
+      remix-i18next: ^6.0.0
+      zod: ^3.0.0
+    peerDependenciesMeta:
+      '@remix-run/cloudflare':
+        optional: true
+      i18next:
+        optional: true
+      remix-i18next:
+        optional: true
+      zod:
+        optional: true
 
   require-like@0.1.2:
     resolution: {integrity: sha512-oyrU88skkMtDdauHDuKVrgR+zuItqr6/c//FXzvmxRGMexSDc6hNvJInGW3LL46n+8b50RykrvwSUIIQH2LQ5A==}
@@ -3396,6 +3511,10 @@ packages:
 
   through2@2.0.5:
     resolution: {integrity: sha512-/mrRod8xqpA+IHSLyGCQ2s8SPHiCDEeQJSep1jqLYeEUClOFG2Qsh+4FU6G9VeqpZnGW/Su8LQGc4YKni5rYSQ==}
+
+  timestring@6.0.0:
+    resolution: {integrity: sha512-wMctrWD2HZZLuIlchlkE2dfXJh7J2KDI9Dwl+2abPYg0mswQHfOAyQW3jJg1pY5VfttSINZuKcXoB3FGypVklA==}
+    engines: {node: '>=8'}
 
   to-fast-properties@2.0.0:
     resolution: {integrity: sha512-/OaKK0xYrs3DmxRYqL/yDc+FxFUVYhDlXMhRmv3z915w2HF1tnN1omB354j8VUGO/hbRzyD6Y3sA7v7GS/ceog==}
@@ -3965,6 +4084,41 @@ snapshots:
       '@babel/helper-validator-identifier': 7.24.7
       to-fast-properties: 2.0.0
 
+  '@biomejs/biome@1.8.3':
+    optionalDependencies:
+      '@biomejs/cli-darwin-arm64': 1.8.3
+      '@biomejs/cli-darwin-x64': 1.8.3
+      '@biomejs/cli-linux-arm64': 1.8.3
+      '@biomejs/cli-linux-arm64-musl': 1.8.3
+      '@biomejs/cli-linux-x64': 1.8.3
+      '@biomejs/cli-linux-x64-musl': 1.8.3
+      '@biomejs/cli-win32-arm64': 1.8.3
+      '@biomejs/cli-win32-x64': 1.8.3
+
+  '@biomejs/cli-darwin-arm64@1.8.3':
+    optional: true
+
+  '@biomejs/cli-darwin-x64@1.8.3':
+    optional: true
+
+  '@biomejs/cli-linux-arm64-musl@1.8.3':
+    optional: true
+
+  '@biomejs/cli-linux-arm64@1.8.3':
+    optional: true
+
+  '@biomejs/cli-linux-x64-musl@1.8.3':
+    optional: true
+
+  '@biomejs/cli-linux-x64@1.8.3':
+    optional: true
+
+  '@biomejs/cli-win32-arm64@1.8.3':
+    optional: true
+
+  '@biomejs/cli-win32-x64@1.8.3':
+    optional: true
+
   '@cloudflare/kv-asset-handler@0.1.3':
     dependencies:
       mime: 2.6.0
@@ -4231,6 +4385,19 @@ snapshots:
   '@eslint/js@8.57.0': {}
 
   '@fastify/busboy@2.1.1': {}
+
+  '@hono/node-server@1.12.2(hono@4.5.11)':
+    dependencies:
+      hono: 4.5.11
+
+  '@hono/vite-dev-server@0.16.0(hono@4.5.11)(miniflare@3.20240512.0)(wrangler@3.57.1(@cloudflare/workers-types@4.20240903.0))':
+    dependencies:
+      '@hono/node-server': 1.12.2(hono@4.5.11)
+      hono: 4.5.11
+      minimatch: 9.0.5
+    optionalDependencies:
+      miniflare: 3.20240512.0
+      wrangler: 3.57.1(@cloudflare/workers-types@4.20240903.0)
 
   '@humanwhocodes/config-array@0.11.14':
     dependencies:
@@ -5974,6 +6141,23 @@ snapshots:
 
   hast-util-whitespace@2.0.1: {}
 
+  hono-remix-adapter@0.1.2(@cloudflare/workers-types@4.20240903.0)(hono@4.5.11)(miniflare@3.20240512.0)(typescript@5.5.4)(wrangler@3.57.1(@cloudflare/workers-types@4.20240903.0))(zod@3.23.8):
+    dependencies:
+      '@hono/vite-dev-server': 0.16.0(hono@4.5.11)(miniflare@3.20240512.0)(wrangler@3.57.1(@cloudflare/workers-types@4.20240903.0))
+      '@remix-run/cloudflare': 2.11.2(@cloudflare/workers-types@4.20240903.0)(typescript@5.5.4)
+      hono: 4.5.11
+      remix-hono: 0.0.16(@remix-run/cloudflare@2.11.2(@cloudflare/workers-types@4.20240903.0)(typescript@5.5.4))(typescript@5.5.4)(zod@3.23.8)
+    transitivePeerDependencies:
+      - '@cloudflare/workers-types'
+      - i18next
+      - miniflare
+      - remix-i18next
+      - typescript
+      - wrangler
+      - zod
+
+  hono@4.5.11: {}
+
   hosted-git-info@6.1.1:
     dependencies:
       lru-cache: 7.18.3
@@ -7023,6 +7207,10 @@ snapshots:
 
   prettier@2.8.8: {}
 
+  pretty-cache-header@1.0.0:
+    dependencies:
+      timestring: 6.0.0
+
   pretty-ms@7.0.1:
     dependencies:
       parse-ms: 2.1.0
@@ -7190,6 +7378,17 @@ snapshots:
       '@types/mdast': 3.0.15
       mdast-util-to-hast: 12.3.0
       unified: 10.1.2
+
+  remix-hono@0.0.16(@remix-run/cloudflare@2.11.2(@cloudflare/workers-types@4.20240903.0)(typescript@5.5.4))(typescript@5.5.4)(zod@3.23.8):
+    dependencies:
+      '@remix-run/server-runtime': 2.11.2(typescript@5.5.4)
+      hono: 4.5.11
+      pretty-cache-header: 1.0.0
+    optionalDependencies:
+      '@remix-run/cloudflare': 2.11.2(@cloudflare/workers-types@4.20240903.0)(typescript@5.5.4)
+      zod: 3.23.8
+    transitivePeerDependencies:
+      - typescript
 
   require-like@0.1.2: {}
 
@@ -7592,6 +7791,8 @@ snapshots:
     dependencies:
       readable-stream: 2.3.8
       xtend: 4.0.2
+
+  timestring@6.0.0: {}
 
   to-fast-properties@2.0.0: {}
 
